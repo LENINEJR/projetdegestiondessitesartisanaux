@@ -909,7 +909,7 @@ document.getElementsByClassName('gcd-gl-btn')[0].className += ' fa fa-search';
 //layer search
 
 var searchLayer = new SearchLayer({
-    layer: lyr_PARCELLES_6,
+    layer: lyr_PARCELLES_5,
     colName: 'GROUPEMENT',
     zoom: 10,
     collapsed: true,
@@ -926,22 +926,11 @@ document.getElementsByClassName('search-layer-input-search')[0].placeholder = 'S
 //layerswitcher
 
 var layerSwitcher = new ol.control.LayerSwitcher({
-    activationMode: 'click',
-	startActive: true,
-	tipLabel: "Layers",
-    target: 'top-right-container',
-	collapseLabel: '»',
-	collapseTipLabel: 'Close'
-    });
+    tipLabel: "Layers",
+    target: 'top-right-container'
+});
 map.addControl(layerSwitcher);
-if (hasTouchScreen || isSmallScreen) {
-	document.addEventListener('DOMContentLoaded', function() {
-		setTimeout(function() {
-			layerSwitcher.hidePanel();
-		}, 500);
-	});	
-}
-
+    
 
 
 
